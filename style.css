@@ -60,27 +60,18 @@ body{
   margin-bottom: 34px;
 }
 
-/* ✅ Imagens com altura controlada e enquadramento consistente */
-.card img{
-  width: 100%;
-  height: 180px;           /* altura boa p/ desktop e mobile */
-  object-fit: cover;       /* preenche bonito */
-  object-position: center; /* centraliza o corte */
-  border-radius: 2px;
+/.card img {
   display: block;
-  background: #e8dfd6;
+  margin: 0 auto;
+  width: 100%;
+  height: 100px;        /* você controla a altura */
+  object-fit: contain; /* mostra a imagem inteira */
+  object-position: center;
 }
 
-/* (opcional) se você quiser que NUNCA corte a imagem:
-.card img{
-  height: 180px;
-  object-fit: contain;
-  background: #e8dfd6;
-}
-*/
 .img-box {
   width: 100%;
-  height: 160px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,8 +79,8 @@ body{
 }
 
 .img-box img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 200%;
+  max-height: 200%;
   object-fit: contain;
 }
 
@@ -206,13 +197,14 @@ body{
 
 @media (max-width: 520px){
   .wrap{ padding: 28px 16px 34px; }
-  .brand p{ font-size: 16px; }
+  .brand p{ font-size: 18px; }
 
-  .card img{ height: 170px; }
-  .card h3{ font-size: 20px; }
+  .card img{ height: 400px; }
+  .card h3{ font-size: 40px; }
 
   .panel h3, .drinks h3{ font-size: 22px; }
-  .panel ul, .drinks ul{ font-size: 16px; }
+  .panel ul, .drinks ul{ font-size: 30px; }
+
 
   .whatsapp-float{
     right: 14px;
