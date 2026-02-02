@@ -60,8 +60,10 @@
     }
 
     .card img{
+     height: 160px;
+    object-fit: cover;
       width: 5000%;
-      height: 500;        /* você controla a altura */
+      height: 500px;        /* você controla a altura */
       -fit: contain; /* mostra a imagem inteira */
       object-position: center;
       width: 100%;
