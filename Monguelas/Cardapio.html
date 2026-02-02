@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Monguela's Burger</title>
+
+  <style>
+    :root{
+      --bg: #f6f1ea;
+      --text: #2f2b26;
+      --muted: #6a625a;
+      --cardTitle: #4a4036;
+      --price: #5a5148;
+      --panel: #d6c9bc;
+      --btn: #7a6857;
+      --btnText: #ffffff;
+      --max: 1050px;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 42px 28px 36px;
+    }
+
+    /* Header */
+    .brand h1{
+      margin: 0 0 6px;
+      font-size: clamp(34px, 4vw, 46px);
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      color: var(--text);
+    }
+    .brand h2{
+      margin: 0 0 18px;
+      font-size: clamp(18px, 2vw, 22px);
+      font-weight: 700;
+      color: var(--cardTitle);
+    }
+    .brand p{
+      margin: 0 0 28px;
+      max-width: 930px;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+    .brand b{ color: var(--text); }
+
+    /* Product grid */
+    .grid{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      align-items: start;
+      margin-top: 10px;
+      margin-bottom: 34px;
+    }
+
+    .card img{
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 2px;
+      display: block;
+      background: #e8dfd6;
+    }
+
+    .card h3{
+      margin: 14px 0 10px;
+      font-size: 22px;
+      line-height: 1.1;
+      font-weight: 700;
+      color: var(--cardTitle);
+    }
+
+    .card p{
+      margin: 0 0 14px;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .price{
+      margin: 0;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--price);
+    }
+
+    /* Bottom section */
+    .bottom{
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 34px;
+      align-items: start;
+      margin-top: 6px;
+    }
+
+    .panel{
+      background: var(--panel);
+      padding: 18px 18px 16px;
+      border-radius: 2px;
+    }
+
+    .panel h3{
+      margin: 0 0 10px;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--cardTitle);
+    }
+
+    .panel ul{
+      margin: 12px 0 12px 18px;
+      padding: 0;
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .panel li strong{
+      font-weight: 700;
+    }
+
+    .panel .note{
+      margin: 10px 0 0;
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text);
+    }
+
+    .drinks h3{
+      margin: 0 0 10px;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--cardTitle);
+    }
+    .drinks ul{
+      margin: 12px 0 0 18px;
+      padding: 0;
+      line-height: 1.9;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* Button */
+    .cta{
+      margin-top: 18px;
+    }
+    .btn{
+      display: inline-block;
+      background: var(--btn);
+      color: var(--btnText);
+      padding: 13px 18px;
+      border-radius: 2px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .btn:active{ transform: translateY(1px); }
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .grid{ grid-template-columns: repeat(2, 1fr); }
+      .bottom{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 520px){
+      .wrap{ padding: 30px 18px; }
+      .grid{ grid-template-columns: 1fr; }
+      .card h3{ font-size: 20px; }
+      .panel h3, .drinks h3{ font-size: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+
+    <header class="brand">
+      <h1>Monguela's Burger</h1>
+      <h2>Hambúrgueria Artesanal Gourmet</h2>
+      <p>
+        Na Monguela’s Burger, cada hambúrguer é preparado artesanalmente, com carnes selecionadas,
+        ingredientes frescos e muito cuidado em cada detalhe. Nosso objetivo é entregar
+        <b>sabor, suculência e qualidade</b>, do primeiro ao último mordida.
+      </p>
+    </header>
+
+    <!-- Cards (linha 1) -->
+    <section class="grid">
+      <article class="card">
+        <img src="images/monguela-super-premium.jpg" alt="Monguela Super Premium">
+        <h3>Monguela Super<br>Premium</h3>
+        <p>
+          360g de carne bovina artesanal (3 discos de 120g), selados na chapa para máxima suculência.
+          Cheddar cremoso derretido, bacon crocante generoso, molho especial e pão brioche macio tostado.
+        </p>
+        <p class="price">A partir de R$ 45,99</p>
+      </article>
+
+      <article class="card">
+        <img src="images/monguela-premium.jpg" alt="Monguela Premium">
+        <h3>Monguela Premium</h3>
+        <p>
+          240g de carne bovina artesanal (2 discos de 120g), grelhados no ponto ideal.
+          Duas fatias de cheddar derretido, bacon crocante, molho especial e pão brioche tostado na manteiga.
+        </p>
+        <p class="price">A partir de R$ 37,99</p>
+      </article>
+
+      <article class="card">
+        <img src="images/monguela-salad-burger.jpg" alt="Monguela Salad Burger">
+        <h3>Monguela Salad<br>Burger</h3>
+        <p>
+          120g de carne bovina artesanal, grelhado no ponto, com cheddar derretido, alface americana crocante,
+          tomate fresco e cebola. Molho cremoso da casa no pão brioche tostado.
+        </p>
+        <p class="price">A partir de R$ 29,99</p>
+      </article>
+
+      <article class="card">
+        <img src="images/monguelinha-cheeseburger.jpg" alt="Monguelinha Cheeseburger">
+        <h3>Monguelinha<br>Cheeseburger</h3>
+        <p>
+          Nosso clássico irresistível. 120g de carne bovina artesanal, grelhado no ponto ideal,
+          coberto com queijo derretido. Simples, saboroso e cheio de personalidade.
+        </p>
+        <p class="price">A partir de R$ 24,99</p>
+      </article>
+
+      <!-- Cards (linha 2) -->
+      <article class="card">
+        <img src="images/monguelinha-bacon-cheddar.jpg" alt="Monguelinha Bacon Cheddar">
+        <h3>Monguelinha Bacon<br>Cheddar</h3>
+        <p>
+          120g de carne bovina artesanal, duas fatias de cheddar derretido, bacon crocante e
+          molho cremoso da casa. Tudo no pão macio tostado na manteiga.
+        </p>
+        <p class="price">A partir de R$ 29,99</p>
+      </article>
+
+      <article class="card">
+        <img src="images/promocao-3-monguelinhas.jpg" alt="Promoção 3 Monguelinhas Bacon Cheddar">
+        <h3>Promoção: 3<br>Monguelinhas Bacon<br>Cheddar</h3>
+        <p>
+          Tá com fome de verdade? Leve 3 Monguelinhas Bacon Cheddar preparados na hora.
+          Ideal para dividir com a galera ou matar a fome de vez.
+        </p>
+        <p class="price">A partir de R$ 69,99</p>
+      </article>
+
+      <!-- Espaços vazios para manter o “respiro” como na imagem (opcional) -->
+      <div class="card" aria-hidden="true"></div>
+      <div class="card" aria-hidden="true"></div>
+    </section>
+
+    <!-- Bottom -->
+    <section class="bottom">
+      <div>
+        <div class="panel">
+          <h3>Monguela's Fritas</h3>
+          <ul>
+            <li><strong>Individual</strong> (120g pequena) – R$ 9,99</li>
+            <li><strong>Tradicional</strong> (150g média) – R$ 12,00</li>
+            <li><strong>Generosa</strong> (200g grande) – R$ 15,00</li>
+          </ul>
+          <p class="note">
+            Crocantes por fora, macias por dentro. O acompanhamento perfeito para seu burger.
+          </p>
+        </div>
+
+        <div class="cta">
+          <a class="btn" href="https://wa.me/5511965855309" target="_blank" rel="noopener">
+            Peça pelo WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <aside class="drinks">
+        <h3>Bebidas Geladas</h3>
+        <ul>
+          <li>Fanta Uva (350ml) – R$ 7,50</li>
+          <li>Fanta Laranja (350ml) – R$ 7,50</li>
+          <li>Coca-Cola (350ml) – R$ 7,50</li>
+          <li>Guaraná Antarctica (350ml) – R$ 7,50</li>
+          <li>Coca-Cola Mini (200ml) – R$ 5,00</li>
+          <li>Água Crystal (500ml) – R$ 5,00</li>
+        </ul>
+      </aside>
+    </section>
+
+  </main>
+</body>
+</html>
