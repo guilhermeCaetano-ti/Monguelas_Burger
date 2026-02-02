@@ -60,7 +60,7 @@
     }
 
     .card img{
-      height: 450px;        /* você controla a altura */
+      height: 450px;  /* você controla a altura */
       -fit: contain; /* mostra a imagem inteira */
       object-position: center;
       width: 100%;
@@ -176,6 +176,17 @@
       font-weight: 700;
       font-size: 16px;
     }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      background: #25d366;
+      color: #000;
+      padding: 14px 18px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      z-index: 999;
 
     .btn:active{ transform: translateY(1px); }
 
