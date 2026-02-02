@@ -67,12 +67,15 @@
     }
 
     .card img{
+      width: 5000%;
+      height: 500;        /* você controla a altura */
+      -fit: contain; /* mostra a imagem inteira */
+      object-position: center;
       width: 100%;
       aspect-ratio: 16/9;
       object-fit: cover;
       border-radius: 2px;
       display: block;
-      background: #e8dfd6;
     }
 
     .card h3{
@@ -89,6 +92,21 @@
       line-height: 1.65;
       color: var(--muted);
     }
+      .img-box {
+        width: 100%;
+        height: 300px;
+        padding-left: 0px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent; /* ou #eee */
+        }
+
+        .img-box img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        }
 
     .price{
       margin: 0;
@@ -166,6 +184,7 @@
       font-weight: 700;
       font-size: 16px;
     }
+
     .btn:active{ transform: translateY(1px); }
 
     /* Responsive */
@@ -198,7 +217,7 @@
     <!-- Cards (linha 1) -->
     <section class="grid">
       <article class="card">
-        <img src="images/monguela-super-premium.jpg" alt="Monguela Super Premium">
+        <img class="img-box" src="Fotos/Monguelasuperpremiun.jfif" alt="Monguela Super Premium">
         <h3>Monguela Super<br>Premium</h3>
         <p>
           360g de carne bovina artesanal (3 discos de 120g), selados na chapa para máxima suculência.
@@ -208,7 +227,7 @@
       </article>
 
       <article class="card">
-        <img src="images/monguela-premium.jpg" alt="Monguela Premium">
+        <img class="img-box" src="Fotos/Monguelapremiun.png" alt="Monguela Premium">
         <h3>Monguela Premium</h3>
         <p>
           240g de carne bovina artesanal (2 discos de 120g), grelhados no ponto ideal.
@@ -218,7 +237,7 @@
       </article>
 
       <article class="card">
-        <img src="images/monguela-salad-burger.jpg" alt="Monguela Salad Burger">
+        <img class="img-box" src="Fotos/Monguelinhasalad.png" alt="Monguela Salad Burger">
         <h3>Monguela Salad<br>Burger</h3>
         <p>
           120g de carne bovina artesanal, grelhado no ponto, com cheddar derretido, alface americana crocante,
@@ -228,7 +247,7 @@
       </article>
 
       <article class="card">
-        <img src="images/monguelinha-cheeseburger.jpg" alt="Monguelinha Cheeseburger">
+        <img class="img-box" src="Fotos/Monguelachesse.png" alt="Monguelinha Cheeseburger">
         <h3>Monguelinha<br>Cheeseburger</h3>
         <p>
           Nosso clássico irresistível. 120g de carne bovina artesanal, grelhado no ponto ideal,
@@ -239,7 +258,7 @@
 
       <!-- Cards (linha 2) -->
       <article class="card">
-        <img src="images/monguelinha-bacon-cheddar.jpg" alt="Monguelinha Bacon Cheddar">
+        <img class="img-box" src="Fotos/MonguelinhaBacon.png" alt="Monguelinha Bacon Cheddar">
         <h3>Monguelinha Bacon<br>Cheddar</h3>
         <p>
           120g de carne bovina artesanal, duas fatias de cheddar derretido, bacon crocante e
@@ -249,14 +268,7 @@
       </article>
 
       <article class="card">
-        <img src="images/promocao-3-monguelinhas.jpg" alt="Promoção 3 Monguelinhas Bacon Cheddar">
-        <h3>Promoção: 3<br>Monguelinhas Bacon<br>Cheddar</h3>
-        <p>
-          Tá com fome de verdade? Leve 3 Monguelinhas Bacon Cheddar preparados na hora.
-          Ideal para dividir com a galera ou matar a fome de vez.
-        </p>
-        <p class="price">A partir de R$ 69,99</p>
-      </article>
+
 
       <!-- Espaços vazios para manter o “respiro” como na imagem (opcional) -->
       <div class="card" aria-hidden="true"></div>
@@ -279,7 +291,7 @@
         </div>
 
         <div class="cta">
-          <a class="btn" href="https://wa.me/5511965855309" target="_blank" rel="noopener">
+          <a class="btn" href="https://wa.me/5511965855309?text=Olá,%20vim%20pelo%20site%20da%20Monguela’s%20Burger%20e%20quero%20fazer%20um%20pedido" target="_blank" rel="noopener">
             Peça pelo WhatsApp
           </a>
         </div>
